@@ -109,12 +109,70 @@ class Minggu4 extends CI_Controller
     //   $expected = "adrian" ;
     //   $this->unit->run($this->ifelse3( NULL, "adrian", "paskalis"),$expected,$judul);  
 
-    $judul = "Pengujuan If Else4 d=mon";
-      $result =$this->ifelse4("Mon") ;
-       $expected = "Have a nice Monday!" ;
-       $this->unit->run($this->ifelse4("Mon"),$expected,$judul);  
+    // $judul = "Pengujuan If Else4 1";
+    // $result =$this->ifelse4() ;
+    // $expected = "Have a nice Tuesday!" ;
+    // $this->unit->run($result,$expected,$judul);  
+
+    // $judul = "Pengujuan If Else4 2";
+    // $result =$this->ifelse4() ;
+    // $expected = "Have a nice Weekend!" ;
+    // $this->unit->run($result,$expected,$judul);  
+
+    // $judul = "Pengujuan If Else4 3";
+    // $result =$this->ifelse4() ;
+    // $expected = "Have a nice Monday!" ;
+    // $this->unit->run($result,$expected,$judul);  
+
+    // $judul = "Pengujuan If Else4 4";
+    // $result =$this->ifelse4() ;
+    // $expected = "Have a nice Wednesday!" ;
+    // $this->unit->run($result,$expected,$judul);  
 
 
+    // $judul = "Pengujuan If Else4 5";
+    // $result =$this->ifelse4() ;
+    // $expected = "Have a nice Thursday!" ;
+    // $this->unit->run($result,$expected,$judul);  
+
+    // $judul = "Pengujuan If Else4 6";
+    // $result =$this->ifelse4() ;
+    // $expected = "Have a nice Weekend!" ;
+    // $this->unit->run($result,$expected,$judul);  
+
+    // $judul = "Pengujian Loop2 1";
+    // $arr = array(0,1,2,3,4);
+    // $expected = "4"; 
+    // $this->unit->run($this->loop2($arr),0, $judul);
+    
+    // $judul = "Pengujian Loop2 2";
+    // $arr = array(null); 
+    // $expected = ""; 
+    // $this->unit->run($this->loop2($arr),0, $judul);
+    
+    // $judul = "Pengujian Loop2 3";
+    // $arr = array(2,2,2,2);
+    // $expected = "0"; 
+    // $this->unit->run($this->loop2($arr),0, $judul);
+    
+    // $judul = "Pengujian Loop2 4";
+    // $arr = array();
+    // $expected = "0"; 
+    // $this->unit->run($this->loop2($arr),0, $judul);
+    
+     $judul = "Pengujian Loop3 1"; 
+     $expected = "Something wrong. Please contact us"; 
+     $this->unit->run($this->loop3(null,null),$expected,$judul); 
+    
+     $judul = "Pengujian Loop3 2";
+    $result = $this->loop3(1); 
+    $expected = 100; 
+     $this->unit->run($result,$expected,$judul); 
+   
+    // $judul = "Pengujian Loop3 1"; 
+    // $expected = "Something wrong. Please contact us"; 
+    // $this->unit->run($this->loop3(null,null),$expected,$judul); 
+    
         echo $this->unit->report();
     }
 
@@ -178,12 +236,16 @@ class Minggu4 extends CI_Controller
        $d = date($inputtgl);
        if($d == "Fri"){
             $tmp = "Have a nice weekend!";
-        }elseif($d == "Sun"){
-        }elseif($d == "Wed"){
+        }
+        elseif($d == "Sun"){
+        }
+        elseif($d == "Wed"){
             $tmp = "Have a nice Wednesday!";
-        }elseif($d == "Thu"){
+        }
+        elseif($d == "Thu"){
             $tmp = "Have a nice Thursday!";
-        }elseif($d == "Sat"){
+        }
+        elseif($d == "Sat"){
             $tmp = "Have a nice Weekend!";
         }
         return $tmp;
