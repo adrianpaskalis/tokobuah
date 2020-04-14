@@ -33,6 +33,7 @@
 										<th>Price</th>
 										<th>Photo</th>
 										<th>Description</th>
+										<th>Expired Date</th>
 										<th>Action</th>
 									</tr>
 								</thead>
@@ -50,6 +51,11 @@
 										</td>
 										<td class="small">
 											<?php echo substr($product->description, 0, 120) ?>...</td>
+										
+										<td>
+											<?php echo $product->expired_date ?>
+										</td>
+
 										<td width="250">
 											<a href="<?php echo site_url('admin/products/edit/'.$product->product_id) ?>"
 											 class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
