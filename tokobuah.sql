@@ -55,12 +55,12 @@ CREATE TABLE users (
   email varchar(255) NOT NULL,
   full_name varchar(255) NOT NULL,
   phone varchar(20) NOT NULL,
-  role enum('admin','customer') NOT NULL DEFAULT 'customer',
+  role enum NOT NULL DEFAULT 'customer',
   last_login timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   photo varchar(64) NOT NULL DEFAULT 'user_no_image.jpg',
   created_at timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   is_active tinyint(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabel untuk menyimpan data user';
+) ;
 
 --
 -- Dumping data for table `users`
